@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Correct way to access the innerHTML property using insertAdjacentHTML
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = 'This is a new paragraph.';
+    document.getElementById('myDiv').appendChild(newParagraph);
+    
+    //Alternative using insertAdjacentHTML which is slightly safer
+    //document.getElementById('myDiv').insertAdjacentHTML('beforeend', '<p>This is a new paragraph.</p>');
+  </script>
+</body>
+</html>
